@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragment/common :: headerFragment" >
+	<link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+	<link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/thymeleaf-demo.css}" />
+</head>
+<body>
+<div class="container">
+	<br/>
+	<div class="span10 offset1">
+		<span class="alert alert-success" th:text="${'User login : '+sec.principal.username}">User login : foo bar</span>
+		<br/><br/>
+		<span class="alert alert-success" th:text="${'User authorities : '+ #strings.listJoin(sec.principal.authorities,',')}">User authorities : simple user</span>
+	</div>
+	 <div th:include="fragment/common :: [//footer]"></div>
+</div>
+
+</body>
+</html>
