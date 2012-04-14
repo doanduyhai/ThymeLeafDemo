@@ -6,27 +6,28 @@ import java.util.List;
 public class Artist
 {
 
-	private String name;
+	private String firstname;
+
+	private String lastname;
 
 	private List<String> discography = new ArrayList<String>();
 
 	private String bio;
 
-	public Artist(String name, List<String> discography, String bio) {
+	private boolean alive;
+
+	public Artist(String firstname, String lastname, List<String> discography, String bio, boolean alive) {
 		super();
-		this.name = name;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.discography = discography;
 		this.bio = bio;
+		this.alive = alive;
 	}
 
 	public String getName()
 	{
-		return name;
-	}
-
-	public void setName(String name)
-	{
-		this.name = name;
+		return this.firstname + ' ' + this.lastname;
 	}
 
 	public List<String> getDiscography()
@@ -34,19 +35,24 @@ public class Artist
 		return discography;
 	}
 
-	public void setDiscography(List<String> discography)
-	{
-		this.discography = discography;
-	}
-
 	public String getBio()
 	{
 		return bio;
 	}
 
-	public void setBio(String bio)
+	public boolean isAlive()
 	{
-		this.bio = bio;
+		return alive;
+	}
+
+	public String getFirstname()
+	{
+		return firstname;
+	}
+
+	public String getLastname()
+	{
+		return lastname;
 	}
 
 }

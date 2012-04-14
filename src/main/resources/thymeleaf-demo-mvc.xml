@@ -12,7 +12,15 @@
 	<mvc:resources location="/assets/css/" mapping="/assets/css/**" />
 	<mvc:resources location="/assets/js/" mapping="/assets/js/**" />
 	
-	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+	<bean id="securityInterceptor" class="doan.thymeleaf.demo.security.SecurityInterceptor"/>
+	
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="securityInterceptor" />
+			</list>	
+		</property>
+	</bean>
 	
 	<bean id="httpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
 		<property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
@@ -64,6 +72,7 @@
 		<property name="characterEncoding" value="UTF-8"/>
 	</bean>
 
+	<bean id="dateFormatter" class="doan.thymeleaf.demo.util.DateFormatter"/>
 
 	
 			

@@ -25,3 +25,10 @@
 {
 	text-align: left !important;
 }
+
+#footerText
+{
+	text-align: center;
+	position: fixed;  
+	bottom: 0;
+}
