@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+	<link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/thymeleaf-demo.css}" />
+</head>
+<body>
+<div class="container">
+	<br/>
+	<br/>
+	<br/>
+	<div class="span4 offset4 row-fluid">
+		<div id="userMain" class="span1 table-bordered">
+			<a href="#">
+				<img id="picture" src="http://www.gravatar.com/avatar/ffa96040bb4211cad1c66f385d8cb77b?s=64"
+					data-user="duyhai"
+					th:src="${'http://www.gravatar.com/avatar/'+currentUser.gravatar+'?s=64'}"
+					th:attr="data-user=${currentUser.login}">
+				</img>
+			</a>
+		</div>
+		<div class="span3 table-bordered">
+			<h2>
+				<span id="firstName" th:text="${currentUser.firstName}">DuyHai</span> 
+				<span id="lastName" th:text="${currentUser.lastName}">DOAN</span>
+			</h2>
+		</div>
+	</div>
+</div>
+</body>
+</html>

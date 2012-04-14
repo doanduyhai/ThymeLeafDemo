@@ -1,0 +1,12 @@
+tatami.iml
+tatami.ipr
+tatami.iws
+target/*
+target
+test-output
+test-output/*
+.settings
+.settings/*
+/.classpath
+/.project
+/.springBeans
