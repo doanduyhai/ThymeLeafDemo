@@ -29,3 +29,5 @@ Presentation
 The default users are "ddoan/password" but you can change it in the applicationContext-security.xml file
 
 - All examples can be accessed by the URL http://127.0.0.1:8080/ThymeleafDemo/example[N] where [N] ranges from 1 to 7
+
+Note: there is currently no "Logout" link to log out from the application. The security layer & login feature have been added to illustrate ThymeLeaf integration with Spring Security. To logout properly, you can just type http://127.0.0.1:8080/ThymeleafDemo/logout
