@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../assets/css/bootstrap.css" th:href="@{/assets/css/bootstrap.css}" />
+	<link rel="stylesheet" href="../assets/css/thymeleaf-demo.css" th:href="@{/assets/css/thymeleaf-demo.css}" />
+</head>
+<body>
+<div class="container">
+<span>Employee first name is :</span>
+	<p th:text="${employee.firstName}"></p>
+	<span>Employee last name is :</span>
+	<p th:text="${employee.lastName}"></p>
+</div>
+</body>
+</html>
