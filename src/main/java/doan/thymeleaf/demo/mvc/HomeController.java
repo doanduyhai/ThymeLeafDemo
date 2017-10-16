@@ -118,7 +118,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/example8", method = RequestMethod.GET)
 	public String example8(Model model) {
-		model.addAttribute("employee", new Employee("John", "Snow"));
+		model.addAttribute("employee", new Employee("John", "Snow", 30));
 		return "pages/example8";
 	}
 
