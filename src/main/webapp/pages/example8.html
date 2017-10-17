@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../assets/css/bootstrap.css"
+	th:href="@{/assets/css/bootstrap.css}" />
+<link rel="stylesheet" href="../assets/css/thymeleaf-demo.css"
+	th:href="@{/assets/css/thymeleaf-demo.css}" />
+</head>
+<body>
+	<div id="main" class="container">
+		<p class="alert alert-warning">Employee first name is :</p>
+		<p class="alert alert-success" th:text="${employee.firstName}"></p>
+		<p class="alert alert-warning">Employee last name is :</p>
+		<p class="alert alert-success" th:text="${employee.getLastName()}"></p>
+		<p class="alert alert-danger">So, how old is John?</p>
+		<p class="alert alert-info" th:text="${employee.getAge()}"></p>
+
+		<form>
+			<input type="text" placeholder="First Name" />
+			<input type="text" placeholder="Last Name" />
+			<p class="col-md-3">
+				<input type="submit" value="Send" class="btn btn-danger btn-large" />
+			</p>
+		</form>
+	</div>
+</body>
+</html>

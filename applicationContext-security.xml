@@ -35,7 +35,7 @@
 	
 
     <user-service id="userDetailsService">
-        <user name="ddoan" password="password" authorities="ROLE_USER"/>
+        <user name="tania" password="123" authorities="ROLE_USER"/>
     </user-service>
 
 </beans:beans>
